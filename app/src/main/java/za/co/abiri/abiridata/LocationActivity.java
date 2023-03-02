@@ -80,6 +80,10 @@ public class LocationActivity extends AppCompatActivity {
         //longitTextView = findViewById(R.id.lonTextView);
         backBtn = findViewById(R.id.backBtn1);
 
+        //Additional Fields
+        textLat = findViewById(R.id.edit_desc_lat);
+        textLong = findViewById(R.id.edit_desc_long);
+
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
 
         //Method to get the location
@@ -101,9 +105,7 @@ public class LocationActivity extends AppCompatActivity {
         popupAddBtn = findViewById(R.id.popup_add1);
         popupClickProgress = findViewById(R.id.popup_progressBar1);
 
-        //Additional Fields
-        textLat = findViewById(R.id.edit_desc_lat);
-        textLong = findViewById(R.id.edit_desc_long);
+
 
 
 
@@ -333,6 +335,9 @@ public class LocationActivity extends AppCompatActivity {
                         if (location == null) {
                             requestNewLocationData();
                         } else {
+                            // Adding the values to the fields automatically
+                            textLat.setText(location.getLatitude() + "");
+                            textLong.setText(location.getLongitude() + "");
                             latitudeTextView.setText(location.getLatitude() + "; " + location.getLongitude());
                             //longitTextView.setText(location.getLongitude() + "");
                         }
