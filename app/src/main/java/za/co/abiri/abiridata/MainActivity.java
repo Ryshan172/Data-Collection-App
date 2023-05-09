@@ -34,6 +34,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import za.co.abiri.abiridata.Fragments.HomeCFragment;
 import za.co.abiri.abiridata.databinding.ActivityMainBinding;
 
+/**
+ * Manages navigationview, firebase initialision
+ * Manages popup for different menu options
+ */
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 

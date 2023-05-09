@@ -43,6 +43,9 @@ import com.google.firebase.storage.UploadTask;
 
 import za.co.abiri.abiridata.Models.Post;
 
+/**
+ * LocationActivity for adding data to send to firebase
+ */
 public class LocationActivity extends AppCompatActivity {
 
     FusedLocationProviderClient mFusedLocationClient;
